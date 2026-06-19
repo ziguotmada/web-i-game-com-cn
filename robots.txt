@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ziguotmada.github.io/web-i-game-com-cn/sitemap.xml

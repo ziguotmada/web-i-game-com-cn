@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱游戏 · 杂志专题</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', '宋体', serif;
+            background: #f8f6f0;
+            color: #2e2b26;
+            line-height: 1.7;
+            font-size: 16px;
+            padding: 0 1.5rem;
+        }
+
+        .page {
+            max-width: 840px;
+            margin: 0 auto;
+            padding: 2.5rem 0 4rem;
+        }
+
+        /* hero — 杂志标题区 */
+        .hero {
+            text-align: center;
+            padding: 2.8rem 0 2.2rem;
+            border-bottom: 1px solid #d9d2c5;
+            margin-bottom: 2.8rem;
+        }
+
+        .hero h1 {
+            font-size: 3.6rem;
+            font-weight: normal;
+            letter-spacing: 0.08em;
+            color: #3d352b;
+            margin-bottom: 0.5rem;
+            font-family: 'Times New Roman', 'Georgia', serif;
+        }
+
+        .hero .sub {
+            font-size: 0.95rem;
+            color: #8a8075;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            border-top: 1px solid #d9d2c5;
+            display: inline-block;
+            padding-top: 0.6rem;
+            margin-top: 0.2rem;
+        }
+
+        /* 文章主区域 */
+        .intro-block {
+            margin-bottom: 2.4rem;
+        }
+
+        .intro-block p {
+            margin-bottom: 1.3rem;
+            text-indent: 2em;
+            text-align: justify;
+        }
+
+        .intro-block p:first-of-type {
+            margin-top: 0;
+        }
+
+        /* 引用 / 提示框 */
+        .pullquote {
+            background: #ece8e0;
+            border-left: 5px solid #b8aa96;
+            padding: 1.2rem 1.8rem;
+            margin: 2rem 0 2.2rem;
+            font-style: italic;
+            color: #4a423b;
+            border-radius: 0 4px 4px 0;
+            position: relative;
+        }
+
+        .pullquote::before {
+            content: "📌";
+            font-style: normal;
+            font-size: 1.2rem;
+            margin-right: 0.5rem;
+            opacity: 0.7;
+        }
+
+        .faq-note {
+            background: #f1ede6;
+            padding: 1.2rem 1.5rem;
+            border-radius: 6px;
+            margin: 2rem 0 1.4rem;
+            border: 1px solid #dbd3c7;
+            font-size: 0.95rem;
+        }
+
+        .faq-note strong {
+            color: #5d4f3e;
+            font-weight: normal;
+            letter-spacing: 0.03em;
+        }
+
+        .faq-note details {
+            margin-top: 0.6rem;
+        }
+
+        .faq-note summary {
+            cursor: pointer;
+            font-weight: normal;
+            color: #6b5d4c;
+            margin-bottom: 0.3rem;
+            padding: 0.2rem 0;
+        }
+
+        .faq-note summary:hover {
+            color: #3f352b;
+        }
+
+        .faq-note details p {
+            margin: 0.5rem 0 0.2rem 1.2rem;
+            text-indent: 0;
+            color: #4f463e;
+        }
+
+        /* 页尾访问提示 */
+        .footer-visit {
+            margin-top: 3.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid #d9d2c5;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #6b6055;
+        }
+
+        .footer-visit .visit-line {
+            background: #e9e2d8;
+            display: inline-block;
+            padding: 0.6rem 2.2rem;
+            border-radius: 40px;
+            font-size: 1rem;
+            letter-spacing: 0.04em;
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-visit a {
+            color: #4a3f33;
+            text-decoration: none;
+            border-bottom: 1px dotted #9b8c7a;
+            transition: border-bottom 0.2s, color 0.2s;
+        }
+
+        .footer-visit a:hover {
+            color: #1f1a15;
+            border-bottom: 1px solid #1f1a15;
+        }
+
+        .footnote {
+            margin-top: 1.4rem;
+            font-size: 0.85rem;
+            color: #9a8e80;
+        }
+
+        /* 响应式细节 */
+        @media (max-width: 600px) {
+            body {
+                padding: 0 1rem;
+            }
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+            .hero .sub {
+                font-size: 0.8rem;
+            }
+            .pullquote {
+                padding: 0.9rem 1.2rem;
+                margin: 1.4rem 0;
+            }
+            .faq-note {
+                padding: 0.9rem 1rem;
+            }
+            .footer-visit .visit-line {
+                padding: 0.5rem 1.4rem;
+                font-size: 0.9rem;
+            }
+            .intro-block p {
+                text-indent: 1.8em;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+            .hero {
+                padding: 1.8rem 0 1.5rem;
+            }
+            .page {
+                padding: 1.5rem 0 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+
+        <!-- hero 首页横幅 -->
+        <header class="hero">
+            <h1>爱游戏</h1>
+            <div class="sub">重访 · 收藏 · 持续关注</div>
+        </header>
+
+        <!-- 三段自然介绍 + 背景说明 + 引用块 -->
+        <section class="intro-block">
+            <p>
+                对于许多数字生活者来说，游戏不仅是闲暇时的消遣，更是一种持续生长的文化档案。当我们再次打开一个熟悉的站点，往往不只是为了寻找某一款新作，而是重新连接那种由规则、叙事与交互共同构成的独特语境。<a href="https://web-i-game.com.cn" style="color:#4a3f33;border-bottom:1px dotted #9b8c7a;text-decoration:none;">爱游戏</a>正是这样一个值得反复回访的坐标——它不追逐短暂的热点，而是以克制的叙事节奏，记录着电子游戏世界中那些经得起审视的内容。
+            </p>
+            <p>
+                这种回访的价值，在信息过载的时代显得尤为珍贵。收藏一个网址，有时等于锚定一种观看方式。从独立实验作品到经典重访，从机制分析到文化侧写，爱游戏保持着一种介于杂志与档案之间的气质。页面上的每一篇文章都像一本翻开的旧书，留有思考的余温，而非匆忙的结论。
+            </p>
+        </section>
+
+        <!-- 引用块 / 背景说明 -->
+        <div class="pullquote">
+            真正值得保留的站点，往往不是因为它囊括了一切，而是因为它懂得筛选。再次访问，是对筛选结果的再次信任。
+        </div>
+
+        <section class="intro-block">
+            <p>
+                持续关注一个内容源，本质上是在选择一种信息审美。爱游戏的选题常常绕开主流评测的喧嚣，转而关注游戏作为媒介的表达边界：一个像素画师的十年履历，一张地图设计背后的情感测绘，或者某个被忽略的存档机制如何重塑玩家的时间感知。这些话题不会出现在每日推送的洪流中，但它们构成了游戏文化中更耐读的肌理。
+            </p>
+            <p>
+                将这样一个站点加入收藏夹，相当于在自己的数字书架上留出一个安静的位置。无论你是因为某篇特写初次到访，还是在寻找某个被讨论过的冷门作品时重新打开，那种熟悉且略带沉静的排版总会让人迅速进入阅读状态。这里没有弹窗，没有催促注册的横幅，只有段落与段落之间自然的留白。
+            </p>
+        </section>
+
+        <!-- FAQ 摘要式提示框 (非重复章节) -->
+        <div class="faq-note">
+            <strong>❓ 常见回访者印象</strong>
+            <details>
+                <summary>为什么这个站点给人的感觉不太一样？</summary>
+                <p>它的内容节奏偏向杂志式叙事，不求覆盖所有新品，而是挑选那些经得起拆解的主题。页面设计也刻意回避了工业化的模板感，更接近传统印刷物的呼吸感。</p>
+            </details>
+            <details>
+                <summary>收藏之后，多久会有新内容？</summary>
+                <p>更新并不频繁，但每篇都经过相对充分的准备。这也解释了为什么许多读者会选择将其加入书签，隔一段时间再回来看看——就像翻一本不定期出版的册子。</p>
+            </details>
+            <details>
+                <summary>如何向朋友描述这个站点？</summary>
+                <p>你可以说：“有一个叫爱游戏的地方，它不着急，写的东西值得慢慢看。”</p>
+            </details>
+        </div>
+
+        <!-- 页尾访问提示 (嵌入链接) -->
+        <footer class="footer-visit">
+            <div class="visit-line">
+                ↻ 再次前往 · <a href="https://web-i-game.com.cn">爱游戏</a>
+            </div>
+            <p style="margin-top:0.6rem;text-indent:0;">
+                如果你已经将它加入收藏夹，现在正是重新打开的时机。<br>
+                如果这是初次照面，不妨从首页的任意一篇文章开始。
+            </p>
+            <div class="footnote">
+                保持关注，就像保持一种翻书的习惯。
+            </div>
+        </footer>
+
+    </div>
+</body>
+</html>
