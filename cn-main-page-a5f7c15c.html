@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>leyu · 稳定连接入口</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: #fafafa;
+            color: #1e1e1e;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        .page {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 3rem;
+        }
+        /* hero */
+        .hero {
+            padding: 3rem 0 2rem;
+            border-bottom: 1px solid #eaeaea;
+        }
+        .hero h1 {
+            font-weight: 500;
+            font-size: 2.2rem;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
+        .hero .sub {
+            font-size: 1rem;
+            color: #5f5f5f;
+            max-width: 85%;
+        }
+        .hero .badge {
+            display: inline-block;
+            background: #eef1f5;
+            padding: 0.2rem 0.8rem;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            color: #3a4a5a;
+            margin-top: 1rem;
+        }
+
+        /* section 通用 */
+        section {
+            padding: 2.2rem 0;
+            border-bottom: 1px solid #eaeaea;
+        }
+        section:last-of-type {
+            border-bottom: none;
+        }
+        h2 {
+            font-weight: 500;
+            font-size: 1.4rem;
+            margin-bottom: 1.2rem;
+            letter-spacing: -0.01em;
+        }
+        h3 {
+            font-weight: 500;
+            font-size: 1.1rem;
+            margin: 1.2rem 0 0.4rem;
+        }
+        p {
+            margin-bottom: 0.8rem;
+            color: #2c2c2c;
+        }
+        p.quiet {
+            color: #6b6b6b;
+            font-size: 0.95rem;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem 1.5rem;
+            margin-top: 0.2rem;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 1.2rem 1.2rem 1.2rem 1.2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+            border: 1px solid #ededed;
+            transition: box-shadow 0.2s;
+        }
+        .card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .card .icon {
+            font-size: 1.4rem;
+            margin-bottom: 0.4rem;
+        }
+        .card h4 {
+            font-weight: 500;
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
+        }
+        .card p {
+            font-size: 0.9rem;
+            color: #4f4f4f;
+            margin-bottom: 0;
+        }
+
+        /* FAQ 摘要 */
+        .faq-item {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-q {
+            font-weight: 500;
+            font-size: 0.98rem;
+            margin-bottom: 0.2rem;
+        }
+        .faq-a {
+            font-size: 0.9rem;
+            color: #5e5e5e;
+        }
+
+        /* footer */
+        .footer-note {
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #eaeaea;
+            font-size: 0.9rem;
+            color: #6a6a6a;
+            text-align: center;
+        }
+        .footer-note a {
+            color: #1e1e1e;
+            text-decoration: none;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 1px;
+        }
+        .footer-note a:hover {
+            border-bottom-color: #1e1e1e;
+        }
+
+        a {
+            color: #1e1e1e;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            text-decoration-color: #cbcbcb;
+        }
+        a:hover {
+            text-decoration-color: #1e1e1e;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            .page { padding: 1.5rem 1rem 2rem; }
+            .hero h1 { font-size: 1.8rem; }
+            .grid-2 { grid-template-columns: 1fr; }
+            .hero .sub { max-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <!-- hero -->
+    <div class="hero">
+        <span class="badge">稳定入口 · 直达页面</span>
+        <h1>访问 <a href="https://cn-main-leyu.com" style="text-decoration: none; border-bottom: 2px solid #d0d0d0;">leyu</a> 的简明索引</h1>
+        <p class="sub">面向需要快速确认访问路径的用户，本页汇总核心信息、服务特征与常见问题摘要，帮助您更高效地了解 leyu 平台结构。</p>
+    </div>
+
+    <!-- 优势区 -->
+    <section>
+        <h2>平台特征</h2>
+        <div class="grid-2">
+            <div class="card">
+                <div class="icon">⚙️</div>
+                <h4>多层路由保障</h4>
+                <p>通过多节点解析与入口映射，降低单点中断影响，提升访问连续性。</p>
+            </div>
+            <div class="card">
+                <div class="icon">🔒</div>
+                <h4>会话安全基线</h4>
+                <p>采用传输加密与基础验证机制，保护用户连接过程中的数据完整性。</p>
+            </div>
+            <div class="card">
+                <div class="icon">🧭</div>
+                <h4>路径清晰可查</h4>
+                <p>主域与备用路由均经过可用性校验，用户可参考本页说明进行访问。</p>
+            </div>
+            <div class="card">
+                <div class="icon">📄</div>
+                <h4>信息结构稳定</h4>
+                <p>页面布局与入口指向保持一致，减少因路径变动带来的认知成本。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 说明区：稳定入口与使用场景 -->
+    <section>
+        <h2>入口说明 & 适用场景</h2>
+        <p>当前推荐的主访问地址为 <a href="https://cn-main-leyu.com">leyu</a>，该入口适用于常规网络环境下的直接连接。平台围绕资源调度与访问稳定性进行设计，适用于以下场景：</p>
+        <ul style="margin: 0.6rem 0 1rem 1.4rem; color: #2c2c2c;">
+            <li>日常访问与信息查询，需要低延迟的页面响应；</li>
+            <li>跨区域网络环境下的连接测试，观察路由适应能力；</li>
+            <li>对服务连续性有基础需求的用户，作为参考入口之一。</li>
+        </ul>
+        <p class="quiet">提示：如遇临时连接波动，可尝试刷新页面或检查本地网络配置，无需频繁更换目标地址。</p>
+    </section>
+
+    <!-- FAQ 摘要 -->
+    <section>
+        <h2>常见问题摘要</h2>
+        <div class="faq-item">
+            <div class="faq-q">Q: 如何确认当前访问的是最新可用地址？</div>
+            <div class="faq-a">A: 本页面提供的 <a href="https://cn-main-leyu.com">leyu</a> 链接为当前维护中的主入口，如有调整会在此处同步更新。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">Q: 页面加载速度受哪些因素影响？</div>
+            <div class="faq-a">A: 主要与用户网络运营商、本地 DNS 解析及节点分布有关，建议使用稳定的互联网连接。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">Q: 是否需要注册或安装额外工具？</div>
+            <div class="faq-a">A: 不需要，直接通过浏览器访问 <a href="https://cn-main-leyu.com">leyu</a> 即可进入页面，无需额外软件或注册步骤。</div>
+        </div>
+    </section>
+
+    <!-- 底部链接 -->
+    <div class="footer-note">
+        <p>本页信息仅供参考 · 主域入口：<a href="https://cn-main-leyu.com">leyu</a> · 更新于近期</p>
+    </div>
+</div>
+</body>
+</html>
