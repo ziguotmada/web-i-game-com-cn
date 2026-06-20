@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>威尼斯人 · 稳定访问入口与页面说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: #f6f5f3;
+            color: #1f1f1f;
+            line-height: 1.7;
+        }
+        /* 深色头图 */
+        .hero {
+            background: linear-gradient(135deg, #0b0b12 0%, #1c1b29 50%, #282634 100%);
+            color: #e6e3dc;
+            padding: 4rem 2rem 3.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: -40%;
+            left: -20%;
+            width: 140%;
+            height: 180%;
+            background: radial-gradient(circle at 30% 40%, rgba(200, 180, 140, 0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.6rem;
+            position: relative;
+            z-index: 1;
+        }
+        .hero .sub {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: #b9b1a4;
+            max-width: 680px;
+            margin: 0 auto 1.2rem;
+            position: relative;
+            z-index: 1;
+            border-bottom: 1px solid rgba(230, 227, 220, 0.15);
+            padding-bottom: 1.2rem;
+        }
+        .hero .meta {
+            font-size: 0.95rem;
+            color: #8f8a7f;
+            position: relative;
+            z-index: 1;
+        }
+        .container {
+            max-width: 1020px;
+            margin: 0 auto;
+            padding: 2.8rem 2rem 4rem;
+        }
+        /* 浅色正文区 */
+        .card {
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.03), 0 1px 3px rgba(0,0,0,0.04);
+            padding: 2.5rem 2.8rem;
+            margin-bottom: 2.5rem;
+        }
+        .card h2 {
+            font-size: 1.7rem;
+            font-weight: 450;
+            margin-bottom: 1rem;
+            letter-spacing: 0.02em;
+            color: #1b1a20;
+            border-left: 4px solid #c4a97a;
+            padding-left: 1rem;
+        }
+        .card p {
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+            color: #2c2c30;
+        }
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+        .card ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin: 1.2rem 0 1.8rem;
+        }
+        .card ul li {
+            background: #f3f1ed;
+            padding: 0.5rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            color: #2d2a2a;
+            border: 1px solid #e4ded6;
+            display: inline-block;
+        }
+        /* 强调色用于链接 */
+        a {
+            color: #a5804a;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s ease, color 0.2s ease;
+        }
+        a:hover, a:focus {
+            color: #7c6239;
+            border-bottom-color: #a5804a;
+            outline: none;
+        }
+        .inline-link {
+            color: #a5804a;
+        }
+        .action-note {
+            background: #f8f6f1;
+            border-radius: 12px;
+            padding: 1.8rem 2rem;
+            border: 1px solid #ebe6dc;
+        }
+        .action-note strong {
+            color: #2f2b26;
+        }
+        .faq-item {
+            border-bottom: 1px solid #e7e3db;
+            padding: 1.2rem 0;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-item h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #2b2823;
+            margin-bottom: 0.3rem;
+        }
+        .faq-item p {
+            font-size: 0.95rem;
+            color: #4a4642;
+        }
+        .btn-outline {
+            display: inline-block;
+            margin-top: 0.3rem;
+            padding: 0.5rem 2rem;
+            border: 1px solid #a5804a;
+            border-radius: 40px;
+            color: #a5804a;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.25s;
+            background: transparent;
+        }
+        .btn-outline:hover {
+            background: #a5804a;
+            color: #fff;
+            border-color: #a5804a;
+        }
+        footer {
+            text-align: center;
+            padding: 2.5rem 2rem 2rem;
+            color: #62605c;
+            font-size: 0.9rem;
+            border-top: 1px solid #e2ddd5;
+            margin-top: 1rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 680px) {
+            .hero h1 { font-size: 2rem; }
+            .hero .sub { font-size: 1rem; }
+            .card { padding: 1.8rem 1.5rem; }
+            .card ul { gap: 0.8rem; }
+            .card ul li { padding: 0.4rem 1rem; }
+            .action-note { padding: 1.2rem; }
+        }
+        @media (max-width: 460px) {
+            .container { padding: 1.5rem 1rem; }
+            .card h2 { font-size: 1.4rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <h1>威尼斯人 · 稳定服务页面</h1>
+        <div class="sub">来自产品侧的说明文档 · 清晰指引与使用建议</div>
+        <div class="meta">入口摘要 · 功能说明 · 场景提示</div>
+    </section>
+
+    <div class="container">
+
+        <!-- 摘要与入口 -->
+        <div class="card">
+            <h2>摘要 · 页面说明</h2>
+            <p>
+                本页面向对<strong>威尼斯人</strong>相关功能有了解需求的用户，提供关于平台访问的稳定入口说明、核心特点整理及使用建议。
+                该页面本身是一个信息聚合与导航性质的产品说明页，并不替代任何具体服务协议。
+            </p>
+            <p>
+                如果您正在查找<strong>威尼斯人</strong>的访问方式、页面结构或基础使用前提，以下内容将提供必要的背景说明。
+                建议首先确认您已具备稳定的网络环境，并了解相关区域的服务条款。
+            </p>
+        </div>
+
+        <!-- 亮点 + 链接自然嵌入 -->
+        <div class="card">
+            <h2>功能亮点</h2>
+            <ul>
+                <li>页面持续可访问</li>
+                <li>信息结构清晰</li>
+                <li>多场景适配</li>
+                <li>基础指引完善</li>
+            </ul>
+            <p>
+                作为持续维护的页面，<a href="https://zh-ihg.com" class="inline-link">威尼斯人</a>在内容呈现与访问稳定性上保持了相对一致的标准。
+                页面不依赖第三方跳转，简化了访问路径中的不确定因素。
+            </p>
+            <p>
+                在功能层面，该站点围绕主要服务模块进行整理，用户可根据自身需求快速定位相关内容。
+                页面结构经过多次迭代，当前版本侧重清晰度与阅读连贯性。
+            </p>
+        </div>
+
+        <!-- 使用建议 + 场景提示 -->
+        <div class="card">
+            <h2>使用建议</h2>
+            <div class="action-note">
+                <p><strong>建议一：</strong>在首次访问前，请确保使用主流浏览器并关闭可能干扰页面载入的插件。部分安全策略可能影响资源加载。</p>
+                <p><strong>建议二：</strong>若遇到访问延迟或页面元素异常，首先检查本地网络与DNS设置，必要时可尝试更换网络环境。</p>
+                <p><strong>建议三：</strong>将 <a href="https://zh-ihg.com" class="inline-link">威尼斯人</a> 加入书签或收藏夹，以便后续快速返回。页面本身不依赖临时会话，长期稳定。</p>
+            </div>
+            <p style="margin-top: 1.4rem;">
+                适用场景包括：日常信息查阅、功能入口定位、服务条款对照、以及作为特定操作流程中的参考页面。
+                建议用户根据自身使用习惯对页面内容进行二次筛选。
+            </p>
+        </div>
+
+        <!-- FAQ 摘要 -->
+        <div class="card">
+            <h2>常见疑问摘要</h2>
+            <div class="faq-item">
+                <h3>✦ 页面是否始终可用？</h3>
+                <p>通常情况下保持在线，但可能因维护或网络波动短暂调整。建议错峰访问。</p>
+            </div>
+            <div class="faq-item">
+                <h3>✦ 是否需要注册或登录？</h3>
+                <p>本说明页面可直接浏览，不强制要求身份验证。但部分指向功能区域可能需要相应账号权限。</p>
+            </div>
+            <div class="faq-item">
+                <h3>✦ 如何获取更详细的帮助？</h3>
+                <p>参考页面内提供的指引，或通过站点已知的联络渠道获取支持。本页不直接处理客服请求。</p>
+            </div>
+            <div style="margin-top: 1rem; text-align: right;">
+                <a href="https://zh-ihg.com" class="btn-outline">威尼斯人</a>
+                <span style="font-size: 0.85rem; color: #999; margin-left: 0.6rem;">— 直接访问</span>
+            </div>
+        </div>
+
+        <!-- 可信但克制的访问说明 -->
+        <div class="card">
+            <h2>访问说明</h2>
+            <p>
+                本站点与相关服务由合规实体运营。本介绍页仅作为独立信息参考，不构成对任何外部行为的承诺或诱导。
+                用户在通过 <a href="https://zh-ihg.com" class="inline-link">威尼斯人</a> 获取服务时，应自行判断并遵守当地法律法规。
+            </p>
+            <p>
+                页面中提及的功能与特点基于当前版本，后续可能因产品更新而发生变化。建议定期查阅最新页面内容。
+                本页不收集个人数据，不设置跟踪脚本，仅提供基础的HTML信息展示。
+            </p>
+            <p style="color: #6b6762; border-top: 1px solid #edebe6; padding-top: 1rem; margin-top: 1rem;">
+                <span style="font-weight: 400;">最后更新摘要：</span> 结构优化，补充FAQ与使用建议，保持入口稳定。
+            </p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>页面说明 · 产品信息参考 · 内容定期核对</p>
+        <p style="margin-top: 0.4rem; opacity: 0.7;">© 2025 威尼斯人 · 稳定访问入口</p>
+    </footer>
+
+</body>
+</html>
